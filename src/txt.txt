@@ -1,0 +1,12 @@
+{
+        name: 'Svit Cross',
+        email: 'svitlan0@gmail.com',
+        password: 'example222pwd12345',
+      }
+
+
+{
+    name:"Sveta Malej",
+    email:"svetamalej@mail.com"
+    password: svetamalej031972
+}
