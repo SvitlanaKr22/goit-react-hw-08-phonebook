@@ -1,8 +1,8 @@
 import { Formik } from 'formik';
 import { Field, Label } from './Filter.styled';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectFilter } from 'redux/selectors';
-import { changeFilter } from 'redux/filterSlice';
+import { selectFilter } from 'redux/contacts/selectors';
+import { changeFilter } from 'redux/contacts/filterSlice';
 
 const Filter = () => {
   const value = useSelector(selectFilter);

@@ -4,7 +4,6 @@ import { Nav, Link } from './Navigation.styled';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
-  console.log('isLoggedIn=', isLoggedIn);
   return (
     <Nav>
       <Link to="/">Home</Link>

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { ContactItem, Button } from './Contact.styled';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/contacts/operations';
 
 export default function Contact({ contact }) {
   const dispatch = useDispatch();
@@ -9,7 +9,7 @@ export default function Contact({ contact }) {
   return (
     <ContactItem>
       <p>{contact.name + ': '}</p>
-      <p>{contact.phone}</p>
+      <p>{contact.number}</p>
       <Button type="button" onClick={handleDelete}>
         Delete
       </Button>
@@ -21,6 +21,6 @@ Contact.propTypes = {
   contact: PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
   }),
 };

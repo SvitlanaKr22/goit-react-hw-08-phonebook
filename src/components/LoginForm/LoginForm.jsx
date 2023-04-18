@@ -22,14 +22,12 @@ const validationSchema = Yup.object({
 });
 
 const LoginForm = () => {
-  console.log('FORMA');
   const dispath = useDispatch();
   return (
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={(values, actions) => {
-        console.log(values);
         dispath(logIn(values));
         actions.resetForm();
       }}

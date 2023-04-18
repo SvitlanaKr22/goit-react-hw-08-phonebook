@@ -19,14 +19,17 @@ const authSlice = createSlice({
         state.isLoggedIn = false;
       })
       .addCase(refreshUser.pending, state => {
+        console.log('pending');
         state.isRefreshing = true;
       })
       .addCase(refreshUser.fulfilled, (state, action) => {
+        console.log('fulfilled');
         state.user = action.payload;
         state.isLoggedIn = true;
         state.isRefreshing = false;
       })
       .addCase(refreshUser.rejected, state => {
+        console.log('rejected');
         state.isRefreshing = false;
       })
       .addMatcher(
