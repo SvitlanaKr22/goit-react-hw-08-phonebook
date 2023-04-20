@@ -1,6 +1,5 @@
 import { Formik } from 'formik';
 import { Label } from './Filter.styled';
-//import { Form, Label, Field } from './ContactForm.styled';
 import { Form, Field } from 'components/ContactForm/ContactForm.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectFilter } from 'redux/contacts/selectors';

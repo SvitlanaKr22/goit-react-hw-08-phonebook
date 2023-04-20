@@ -1,12 +1,9 @@
 //import { Helmet } from 'react-helmet'; // устарела
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import LoginForm from 'components/LoginForm/LoginForm';
-import { selectUserError } from 'redux/auth/selectors';
-import { Box, Alert, AlertTitle } from '@mui/material';
-import { useSelector } from 'react-redux';
+import { Box } from '@mui/material';
 
 export default function Login() {
-  const error = useSelector(selectUserError);
   return (
     <HelmetProvider>
       <Box
@@ -22,12 +19,6 @@ export default function Login() {
           <title>Login</title>
         </Helmet>
         <LoginForm />
-        {error && (
-          <Alert severity="error">
-            <AlertTitle>Error</AlertTitle>
-            An error occurred — <strong>{error}</strong>
-          </Alert>
-        )}
       </Box>
     </HelmetProvider>
   );

@@ -1,5 +1,4 @@
 import Contact from 'components/Contact/Contact';
-//import { List } from './ContactList.styled';
 import { selectSearchContacts } from 'redux/contacts/selectors';
 import { useSelector } from 'react-redux';
 import { List, Typography } from '@mui/material';

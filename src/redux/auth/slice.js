@@ -11,6 +11,11 @@ const authSlice = createSlice({
     isRefreshing: false,
     error: null,
   },
+  // reducers: {
+  //   resetError(state) {
+  //     state.error = null;
+  //   },
+  // },
 
   extraReducers: builder => {
     builder
@@ -30,9 +35,6 @@ const authSlice = createSlice({
       .addCase(refreshUser.rejected, state => {
         state.isRefreshing = false;
       })
-      // .addCase(register.rejected, (state, action) => {
-      //   state.error = action.payload;
-      // })
       .addMatcher(
         isAnyOf(register.rejected, logIn.rejected),
         (state, action) => {

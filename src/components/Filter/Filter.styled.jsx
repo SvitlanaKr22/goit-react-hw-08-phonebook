@@ -43,8 +43,6 @@ export const Field = styled(FormikFild)`
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
-  //width: 30%;
-  //margin-left: 25px;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 1.2rem;

@@ -18,7 +18,6 @@ export const App = () => {
   const { isRefreshing } = useAuth();
 
   useEffect(() => {
-    console.log('dispath in App');
     dispatch(refreshUser());
   }, [dispatch]);
 

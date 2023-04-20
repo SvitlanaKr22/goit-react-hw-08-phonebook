@@ -9,7 +9,7 @@ export const Form = styled(FormikForm)`
   margin-right: auto;
   width: 70%;
   padding: 8px;
-  border: 1px solid #1976d2; //#2a2a2a;
+  border: 1px solid #1976d2;
   border-radius: 0.25rem;
   display: flex;
   flex-direction: column;
@@ -63,7 +63,7 @@ export const Button = styled.button`
   border-radius: 4px;
   padding: 0.5em 1em;
   color: #ffffff;
-  background-color: #1976d2; //#9555af;
+  background-color: #1976d2;
   width: 50%;
 
   &:active {
@@ -73,7 +73,7 @@ export const Button = styled.button`
 
   &:hover,
   &:focus {
-    color: #1976d2; //#9555af;
+    color: #1976d2;
     border-color: currentColor;
     background-color: white;
   }

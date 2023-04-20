@@ -19,7 +19,7 @@ export const Phonebook = () => {
         <Typography
           variant="h1"
           sx={{
-            color: '#fff', //'#42a5f5',
+            color: '#fff',
             fontWeight: '700',
           }}
         >

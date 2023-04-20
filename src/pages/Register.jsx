@@ -1,4 +1,3 @@
-//import { Helmet } from 'react-helmet';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import RegisterForm from 'components/RegisterForm/RegisterForm';
 import { selectUserError } from 'redux/auth/selectors';
