@@ -1,5 +1,19 @@
 import styled from 'styled-components';
 import { Field as FormikFild } from 'formik';
+import { Form as FormikForm } from 'formik';
+
+export const Form = styled(FormikForm)`
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  padding: 8px;
+  border: 1px solid #2a2a2a;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+`;
 
 export const Field = styled(FormikFild)`
   display: block;
@@ -29,9 +43,10 @@ export const Field = styled(FormikFild)`
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
-  width: 30%;
-  margin-left: 25px;
+  //width: 30%;
+  //margin-left: 25px;
+  margin-bottom: 20px;
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: #6a666b;
 `;

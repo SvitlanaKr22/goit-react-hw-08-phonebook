@@ -1,5 +1,7 @@
 import { Formik } from 'formik';
-import { Field, Label } from './Filter.styled';
+import { Label } from './Filter.styled';
+//import { Form, Label, Field } from './ContactForm.styled';
+import { Form, Field } from 'components/ContactForm/ContactForm.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectFilter } from 'redux/contacts/selectors';
 import { changeFilter } from 'redux/contacts/filterSlice';
@@ -14,10 +16,17 @@ const Filter = () => {
 
   return (
     <Formik initialValues={{ name: '' }}>
-      <Label>
-        Find contact by name
-        <Field type="text" name="name" value={value} onChange={handleChange} />
-      </Label>
+      <Form>
+        <Label>
+          Find contact by name
+          <Field
+            type="text"
+            name="name"
+            value={value}
+            onChange={handleChange}
+          />
+        </Label>
+      </Form>
     </Formik>
   );
 };

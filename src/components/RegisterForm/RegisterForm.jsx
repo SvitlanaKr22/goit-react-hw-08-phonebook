@@ -9,6 +9,7 @@ import {
 } from 'components/ContactForm/ContactForm.styled';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
+import { Box } from '@mui/material';
 
 const initialValues = {
   name: '',
@@ -22,44 +23,45 @@ const validationSchema = Yup.object({
   password: Yup.string().required('Required'),
 });
 
-// const onSubmit = (values, actions, dispatch) => {
-//   console.log(values);
-//   dispatch(register(values));
-//   actions.resetForm();
-// };
-
 const RegisterForm = () => {
-  console.log('FORMA Registration');
   const dispatch = useDispatch();
   return (
-    <Formik
-      initialValues={initialValues}
-      validationSchema={validationSchema}
-      onSubmit={(values, actions) => {
-        console.log(values);
-        dispatch(register(values));
-        actions.resetForm();
+    <Box
+      sx={{
+        width: '50%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
       }}
     >
-      <Form>
-        <Label>
-          User name
-          <Field type="text" name="name" title="User Name" />
-          <ErrorMessage name="name" component="div" />
-        </Label>
-        <Label>
-          Email
-          <Field type="email" name="email" title="User email" />
-          <ErrorMessage name="email" component="div" />
-        </Label>
-        <Label>
-          Password
-          <Field type="text" name="password" title="User password" />
-          <ErrorMessage name="password" component="div" />
-        </Label>
-        <Button type="submit">Register</Button>
-      </Form>
-    </Formik>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={(values, actions) => {
+          console.log(values);
+          dispatch(register(values));
+          actions.resetForm();
+        }}
+      >
+        <Form>
+          <Label>
+            User name
+            <Field type="text" name="name" title="User Name" />
+            <ErrorMessage name="name" component="div" />
+          </Label>
+          <Label>
+            Email
+            <Field type="email" name="email" title="User email" />
+            <ErrorMessage name="email" component="div" />
+          </Label>
+          <Label>
+            Password
+            <Field type="text" name="password" title="User password" />
+            <ErrorMessage name="password" component="div" />
+          </Label>
+          <Button type="submit">Register</Button>
+        </Form>
+      </Formik>
+    </Box>
   );
 };
 

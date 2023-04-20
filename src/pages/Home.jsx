@@ -1,12 +1,8 @@
+import { Phonebook } from 'components/Phonebook/Phonebook';
 export default function Home() {
   return (
     <div>
-      <h1>
-        Phonebook{' '}
-        <span role="img" aria-label="Greeting icon">
-          💁🕮
-        </span>
-      </h1>
+      <Phonebook />
     </div>
   );
 }

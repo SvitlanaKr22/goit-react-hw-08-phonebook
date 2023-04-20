@@ -4,10 +4,12 @@ import { Field as FormikField } from 'formik';
 import { ErrorMessage as FormikError } from 'formik';
 
 export const Form = styled(FormikForm)`
-  margin-left: 20px;
-  width: 30%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
   padding: 8px;
-  border: 1px solid #2a2a2a;
+  border: 1px solid #1976d2; //#2a2a2a;
   border-radius: 0.25rem;
   display: flex;
   flex-direction: column;
@@ -17,6 +19,8 @@ export const Form = styled(FormikForm)`
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
+  font-family: inherit;
+  font-size: 1em;
 `;
 
 export const Field = styled(FormikField)`
@@ -59,7 +63,7 @@ export const Button = styled.button`
   border-radius: 4px;
   padding: 0.5em 1em;
   color: #ffffff;
-  background-color: #9555af;
+  background-color: #1976d2; //#9555af;
   width: 50%;
 
   &:active {
@@ -69,7 +73,7 @@ export const Button = styled.button`
 
   &:hover,
   &:focus {
-    color: #9555af;
+    color: #1976d2; //#9555af;
     border-color: currentColor;
     background-color: white;
   }

@@ -1,23 +1,41 @@
 import { useAuth } from 'hooks';
 import { UserMenu } from 'components/UserMenu/UserMenu';
 import { Nav, Link } from './Navigation.styled';
+import { Button, IconButton, Box } from '@mui/material';
+import { Home } from '@mui/icons-material';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
   return (
     <Nav>
-      <Link to="/">Home</Link>
-      {/* {isLoggedIn && <NavLink to="/contacts">Contacts</NavLink>} */}
-
+      <Link to="/">
+        <IconButton size="large">
+          <Home fontSize="inherit" />
+        </IconButton>
+      </Link>
       {isLoggedIn ? (
-        <div>
-          <Link to="/contacts">Contacts</Link>
+        <Box
+          sx={{
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
+        >
+          <Button sx={{ fontSize: '1rem' }}>
+            <Link to="/contacts">Contacts</Link>
+          </Button>
+
           <UserMenu />
-        </div>
+        </Box>
       ) : (
         <div>
-          <Link to="/register">Register</Link>
-          <Link to="/login">Log In</Link>
+          <Button sx={{ fontSize: '1rem' }}>
+            <Link to="/register">Register</Link>
+          </Button>
+          <Button sx={{ fontSize: '1rem' }}>
+            <Link to="/login">Log In</Link>
+          </Button>
         </div>
       )}
     </Nav>

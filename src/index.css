@@ -13,3 +13,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --mui-palette-primary-main: #9555af;
+  --mui-palette-primary-light: #42a5f5;
+  --mui-palette-primary-dark: #1565c0;
+  --mui-palette-primary-contrastText: #fff;
+  /* ...other variables */
+}

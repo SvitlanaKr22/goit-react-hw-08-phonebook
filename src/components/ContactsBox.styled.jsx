@@ -1,15 +1,5 @@
 import styled from 'styled-components';
 
-export const Box = styled.div`
-  height: 100vh;
-  font-size: 24px;
-  color: #010101;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-`;
-
 export const Header = styled.h1`
   margin-left: 20px;
   color: #1e0827;
@@ -17,5 +7,9 @@ export const Header = styled.h1`
 
 export const HeaderContacts = styled.h2`
   margin-left: 20px;
-  color: #9555af;
+  // color: #1e0827; // #1976d2; //#9555af;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #1976d2; //#6a666b;
+  text-align: center;
 `;

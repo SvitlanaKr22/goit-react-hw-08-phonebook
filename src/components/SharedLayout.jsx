@@ -3,14 +3,16 @@ import { Container, Header } from './SharedLayout.styled';
 import { Suspense } from 'react';
 //import { GlobalStyle } from './Globalstyle';
 import { Navigation } from './Navigation/Navigation';
+import { AppBarPB } from './AppBarPB/AppBarPB';
 
 export const SharedLayout = () => {
   return (
     <Container>
       {/* <GlobalStyle /> */}
-      <Header>
+      <AppBarPB />
+      {/* <Header>
         <Navigation />
-      </Header>
+      </Header> */}
       <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>

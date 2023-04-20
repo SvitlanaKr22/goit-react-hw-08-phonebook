@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const ContactItem = styled.li`
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 7px;
+  gap: 7px; */
 `;
 
 export const Button = styled.button`
